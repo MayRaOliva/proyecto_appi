@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardModel } from './models/card.model';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularApp';
+  card: CardModel = new CardModel();
   //cardText = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad placeat provident eaque assumenda, nesciunt perspiciatis, debitis optio magnam numquam quo, officiis ex earum sint. Praesentium cum enim tenetur eaque delectus.';
-  dataCard: any[] = [
+  dataCard: CardModel[] = [
     {
       cardText: "HTML",
       cardImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"
@@ -23,7 +25,7 @@ export class AppComponent {
     },
     {
       cardText: "REACT",
-      cardImage: "http://assets.stickpng.com/images/584830f5cef1014c0b5e4aa1.png"
+      cardImage: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
     },
     {
       cardText: "ANGULAR",
@@ -34,4 +36,9 @@ export class AppComponent {
       cardImage: "https://pngimg.com/uploads/php/php_PNG36.png"
     },
   ]
+
+  addCard(){
+    console.log(this.card);
+    this.dataCard.push(this.card);
+  }
 }

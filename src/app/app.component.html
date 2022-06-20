@@ -45,28 +45,13 @@
         </div>
       </nav>
     </header>
+    <br/>
+    <br/>
     <div class="container">
       <div class="row">
-        <div class="col-4">
-            <app-card [cardText]="dataCard[0].cardText" [cardImage]="dataCard[0].cardImage"></app-card>
+        <div class="col-4" *ngFor="let item of dataCard">
+            <app-card [cardText]="item.cardText" [cardImage]="item.cardImage"></app-card>
             <!--<app-card cardText="HTML"></app-card>-->
-        </div>
-        <div class="col-4">
-          <app-card [cardText]="dataCard[1].cardText" [cardImage]="dataCard[1].cardImage"></app-card>
-        </div>
-        <div class="col-4">
-          <app-card [cardText]="dataCard[2].cardText" [cardImage]="dataCard[2].cardImage"></app-card>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <app-card [cardText]="dataCard[3].cardText" [cardImage]="dataCard[3].cardImage"></app-card>
-        </div>
-        <div class="col-4">
-          <app-card [cardText]="dataCard[4].cardText" [cardImage]="dataCard[4].cardImage"></app-card>
-        </div>
-        <div class="col-4">
-          <app-card [cardText]="dataCard[5].cardText" [cardImage]="dataCard[5].cardImage"></app-card>
         </div>
       </div>
     </div>
@@ -76,26 +61,14 @@
       <div class="row">
         <div class="col-10">
           <h2>Formulario de Registro</h2>
-          <form>
+          <form (ngSubmit)="addCard()">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+              <label for="exampleInputEmail1" class="form-label">Lenguaje de programacion</label>
+              <input name="lenguaje" id="lenguaje" type="text" [(ngModel)]="card.cardText" class="form-control" placeholder="Ingresa el lenguaje de programación">
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Apellidos</label>
-              <input type="text" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Fecha de nacimiento</label>
-              <input type="date" class="form-control" id="cumpleaños" placeholder="Ingresa tu fecha de nacimiento">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Nacionalidad</label>
-              <input type="text" class="form-control" id="nacionalidad" placeholder="Ingresa tu nacionalidad">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Edad</label>
-              <input type="range" class="form-control" id="edad" placeholder="Ingresa tu edad">
+              <label for="exampleInputPassword1" class="form-label">Link imagen</label>
+              <input name="imagen" id="imagen" type="text" [(ngModel)]="card.cardImage" class="form-control" placeholder="Ingresa el link de tu imagen">
             </div>
             <button type="submit" class="btn btn-primary">Registrar</button>
             <button type="button" class="btn btn-danger" style="margin-left: 20px;">Cancelar</button>
