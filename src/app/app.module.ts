@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
 import { FormCardComponent } from './components/form-card/form-card.component';
+import { NewsComponent } from './pages/news/news.component';
+import { CardRegisterComponent } from './pages/card-register/card-register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    FormCardComponent
+    FormCardComponent,
+    NewsComponent,
+    CardRegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
