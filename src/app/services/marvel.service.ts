@@ -5,20 +5,15 @@ import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class NewsService {
+export class MarvelService {
 
-  url = environment.urlNewsApi;
+  url = environment.urlMarvelApi
   constructor(private http: HttpClient) { }
 
-  getNews(){
+  getMarvel(){
     const query = {
-      q: "tesla",
-      from: "2022-05-28",
-      sortBy: "publishedAt",
-      apikey: "0e5a6464e32e4dffb6ade9fe63aebb3e"
+      apikey: "5968e2892ca03f980b8a678ae39994516f646ac7",
     }
-    //this.url + '/v2/everything'
-    //template literal - backticks
     return this.http.get(`${this.url}/v2/everything`, {params: query});
   }
 }

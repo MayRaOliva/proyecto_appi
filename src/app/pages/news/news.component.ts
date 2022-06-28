@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticleModel } from 'src/app/models/article.model';
+import { ArticleModel } from 'src/app/models/Article.model';
 import { NewsService } from '../../services/news.service';
 
 @Component({
@@ -16,7 +16,6 @@ export class NewsComponent implements OnInit {
     this.newsService.getNews().subscribe((response: any) => {
       console.log(response.articles);
       this.articles = response.articles;
-    })
+    });
   }
-
 }

@@ -8,5 +8,4 @@ import { CardModel } from './models/card.model';
 })
 export class AppComponent {
   title = 'angularApp';
-  
 }

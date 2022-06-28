@@ -9,6 +9,7 @@ import { FormCardComponent } from './components/form-card/form-card.component';
 import { NewsComponent } from './pages/news/news.component';
 import { CardRegisterComponent } from './pages/card-register/card-register.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MarvelComponent } from './pages/marvel/marvel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     CardComponent,
     FormCardComponent,
     NewsComponent,
-    CardRegisterComponent
+    CardRegisterComponent,
+    MarvelComponent
   ],
   imports: [
     BrowserModule,
