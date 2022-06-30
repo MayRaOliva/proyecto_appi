@@ -10,6 +10,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { CardRegisterComponent } from './pages/card-register/card-register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MarvelComponent } from './pages/marvel/marvel.component';
+import { MarvelService } from './services/marvel.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,11 @@ import { MarvelComponent } from './pages/marvel/marvel.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    MarvelService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

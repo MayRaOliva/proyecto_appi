@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   urlNewsApi: "https://newsapi.org",
-  urlMarvelApi: "https://gateway.marvel.com:443"
+  urlMarvelApi: "https://gateway.marvel.com"
 };
 
 /*
